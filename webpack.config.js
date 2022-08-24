@@ -16,6 +16,17 @@ module: {
           'css-loader'
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        // type: 'asset/resource',
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/images/',
+          name: '[name].[ext]',
+          url: true,
+          publicPath: './assets/images/'
+        }
+      },
     ],
   },
 };
